@@ -15,7 +15,6 @@ html, body{
 #camera--view, #camera--sensor, #camera--output{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    filter: FlipH;
 }
 
 #camera--trigger{
