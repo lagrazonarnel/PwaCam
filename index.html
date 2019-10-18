@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hello World</title>
+	<link rel="manifest" href="./manifest.json">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />  
+	<link rel="apple-touch-icon" href="images/hello-icon-152.png">   
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="white"/>  
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	<meta name="apple-mobile-web-app-title" content="Hello World"> 
+	<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+</head>
+	<body class="fullscreen">
+		<!-- Camera -->
+		<main id="camera">
+
+		    <!-- Camera sensor -->
+		    <canvas id="camera--sensor"></canvas>
+		    
+		    <!-- Camera view -->
+		    <video id="camera--view" autoplay playsinline></video>
+		    
+		    <!-- Camera output -->
+		    <img src="//:0" alt="" id="camera--output">
+
+		    <!-- Camera trigger -->
+		    <button id="camera--trigger">Take a picture</button>
+
+		</main>
+
+		<!-- Reference to your JavaScript file -->
+		<script src="app.js"></script> 
+		<script src="js/main.js"></script>
+	</body>
+</html>
