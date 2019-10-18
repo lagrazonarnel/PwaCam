@@ -10,8 +10,6 @@ const cameraView = document.querySelector("#camera--view"),
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
-    cameraView.translate(w, 0);
-    cameraView.scale(-1, 1);
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
