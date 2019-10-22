@@ -29,7 +29,13 @@ cameraTrigger.onclick = function() {
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
     cameraOutput.src = cameraSensor.toDataURL("image/png");
     cameraOutput.classList.add("taken");
+    document.getElementById("save").click();
     // track.stop();
+};
+
+save_img = function(link) {
+  var image = cameraSensor.toDataURL("image/png");
+  link.href = image;
 };
 
 // Start the video stream when the window loads
