@@ -1,4 +1,4 @@
-var cacheName = 'Pwa';
+var Cache_Name = 'PwaCam';
 
 var filesToCache = [
 
@@ -18,7 +18,7 @@ self.addEventListener('install', function(e) {
 
   e.waitUntil(
 
-    caches.open(cacheName).then(function(cache) {
+    caches.open(Cache_Name).then(function(cache) {
 
       return cache.addAll(filesToCache);
 
@@ -28,6 +28,19 @@ self.addEventListener('install', function(e) {
 
 });
 
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (Cache_Name !== cacheName) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
 
 
 /* Serve cached content when offline 
@@ -46,7 +59,7 @@ self.addEventListener('fetch', function(e) {
 
 });
 */
-self.addEventListener("fetch", function(event) {
+self.addEventListener('fetch', function(event) {
     event.respondWith(
         fetch(event.request).catch(function() {
             return caches.match(event.request).then(function(response) {
@@ -59,3 +72,5 @@ self.addEventListener("fetch", function(event) {
         })
     );
 });
+
+
