@@ -1,6 +1,6 @@
 {
-  "name": "Hello World",
-  "short_name": "Hello",
+  "name": "Camera,
+  "short_name": "Cam",
   "icons": [{
     "src": "images/hello-icon-128.png",
       "sizes": "128x128",
