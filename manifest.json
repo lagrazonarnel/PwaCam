@@ -27,7 +27,8 @@
       "type": "image/png"
     }],
   "lang": "en-US",
-  "start_url": "/",
+  "scope":"/",
+  "start_url": "https://lagrazonarnel.github.io/PwaCam/",
   "display": "standalone",
   "background_color": "white",
   "theme_color": "white"
