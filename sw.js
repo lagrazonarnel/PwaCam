@@ -1,12 +1,12 @@
 var Cache_Name = 'PwaCam';
 
 var filesToCache = [
-  '/',
-  '/index.html',
-  'css/styles.css',
-  'css/style.css',
-  'js/main.js',
-  '/app.js'
+  './',
+  './index.html',
+  './css/styles.css',
+  './css/style.css',
+  './js/main.js',
+  './app.js'
 ];
 
 
